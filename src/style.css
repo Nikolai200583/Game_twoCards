@@ -2,9 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: none;
-   
+    border: none;   
 }
+@font-face {
+    font-family: StratosSkyeng;
+    src: url(../lib/statosskyeng-v1.001/Desktop\ fonts/stratosskyeng-regular.otf) format(opentype);
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+   }
 
 body {
     width: 100vw;
