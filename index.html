@@ -5,19 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Two cards</title>
-    <style>
-        @font-face {
-    font-family: 
-    StratosSkyeng;
-    src: url(./lib/statosskyeng-v1.001/Desktop\ fonts/StratosSkyeng.ttf);
-   }
-    </style>
-    
-    <link rel="stylesheet" href="./scr/style.css"></head>
+        
+    <link rel="stylesheet" href="./src/style.css"></head>
    
 <body>
     <div class="app"></div>
-    <script src="./scr/render.js"></script>
+    <script src="./src/render.js"></script>
+    
 
     <script>
         window.application = {
@@ -30,18 +24,19 @@
                     this.blocks[blockName]
                     (container)              
             },       
-            timers: [],       
+            levels: [],       
             }
 
 
         window.application.blocks['blockChoice'] = renderBlockChoice;
         window.application.screens['screenChoice'] = renderScreenChoice;
-
         window.application.renderScreen('screenChoice');
 
-        console.log( window.application.blocks)
-        console.log( window.application.screens)
+      
+        
+
 
     </script>
+    <script src="../4.2/gameDifficultyChoice.js"></script>
 </body>
 </html>

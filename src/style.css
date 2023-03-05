@@ -2,20 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: none; 
+    border: none;
+   
 }
+
 body {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     background: #004980;
     
 }
-    
-
 .app {
     width: 480px;
     height: 459px;
@@ -24,8 +24,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
 }
+
 .title {
     width: 208px;
     height: 96px;
@@ -35,23 +36,17 @@ body {
     font-family: StratosSkyeng;
     font-weight: 400;
     font-size: 40px;
-   
 }
+
 .level__content {
     display: flex;
     gap: 24px;
 }
+
 .buttons {
-    width: 98px;
-    height: 98px;
-    background: #FFFFFF;
-    border-radius: 12px;
-    color: #0080C1;
-    font-family: StratosSkyeng;
-    font-weight: 400;
-    font-size: 64px;
-    
+   display: none;
 }
+
 .button__start {
     width: 246px;
     height: 50px;
@@ -62,6 +57,30 @@ body {
     font-family: StratosSkyeng;
     font-weight: 400;
     font-size: 24px;
-    
+}
+.button__start:hover {
+    border:2px solid rgb(0, 0, 0);   
+}
+label {
+    width: 98px;
+    height: 98px;
+    padding-top: 12px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    color: #0080C1;
+    font-family: StratosSkyeng;
+    font-weight: 400;
+    font-size: 64px;
+    text-align: center;
+}
+.background {
+    background: #7AC100;
+    color: #FFFFFF;
+}
+label:hover{
+    border:2px solid rgb(0, 0, 0);    
+}
 
+.backgroundButtons {
+    background-color: #0080C1;
 }

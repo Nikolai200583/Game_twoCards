@@ -1,10 +1,18 @@
 function renderBlockChoice(levelContent) {
     const buttonsName = ['1', '2', '3'];
     buttonsName.forEach(elements => {
-        const buttonsLevels = document.createElement('button');
-        buttonsLevels.textContent = elements;
-        buttonsLevels.classList.add('buttons', elements);
+        const buttonsLevels = document.createElement('input');
+        buttonsLevels.setAttribute('type', 'radio');
+        buttonsLevels.setAttribute('value', elements);
+        buttonsLevels.setAttribute('id', elements);
+        buttonsLevels.setAttribute('name', 'group-buttons');                    
+        buttonsLevels.classList.add('buttons');
+        const buttonsLabel = document.createElement('label');
+        buttonsLabel.setAttribute('for', elements);
+        buttonsLabel.classList.add('buttons-label');
+        buttonsLabel.textContent = elements;
         levelContent.appendChild(buttonsLevels);
+        levelContent.appendChild(buttonsLabel);
     });   
    
     
