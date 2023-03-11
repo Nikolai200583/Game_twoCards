@@ -28,11 +28,11 @@ function gameStart () {
             window.application.levels = control.value;  
             
             switch ( window.application.levels) {
-                case '1' : console.log('переходим на экран difficultyOne');
+                case '1' : difficultyScreen(8);
                     break;
-                case '2' : console.log('переходим на экран difficultyTwo');
+                case '2' : difficultyScreen(12);
                     break; 
-                case '3' : console.log('переходим на экран difficultyThree');
+                case '3' : difficultyScreen(16);
                     break;
                 default: break;
             }            
