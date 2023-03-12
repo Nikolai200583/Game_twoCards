@@ -1,43 +1,48 @@
-function difficultyScreen(numbers) {
-  let firsCard = undefined;
-  let secondCard = undefined;
-  let clickable = true;
+import {getImage, duplicateArray, shuffle} from './cards-array';
 
-  document.querySelector("body").textContent = "";
-  const cardsContainer = document.createElement("div");
-  cardsContainer.classList.add("cards__container");
-  document.querySelector("body").appendChild(cardsContainer);
+export function difficultyScreen(numbers) {
+    // let firsCard = undefined;
+    // let secondCard = undefined;
+    let clickable = true;
 
-  const cardsArray = getImage(numbers);
-  const duplicateCardsArray = duplicateArray(cardsArray);
-  shuffle(duplicateCardsArray);
+    document.querySelector('body').textContent = '';
+    const cardsContainer = document.createElement('div');
+    cardsContainer.classList.add('cards__container');
+    document.querySelector('body').appendChild(cardsContainer);
 
-  duplicateCardsArray.forEach((element) => {
-    const cardsItem = document.createElement("div");
-    cardsItem.classList.add("cards");
+    const cardsArray = getImage(numbers);
+    const duplicateCardsArray = duplicateArray(cardsArray);
+    shuffle(duplicateCardsArray);
 
-    const notFlippedCardI = document.createElement("div");
-    const flippedCardI = document.createElement("div");
+    duplicateCardsArray.forEach((element) => {
+        const cardsItem = document.createElement('div');
+        cardsItem.classList.add('cards');
 
-    notFlippedCardI.classList.add('notflipped');
-    flippedCardI.classList.add('flipped');
+        const notFlippedCardI = document.createElement('div');
+        const flippedCardI = document.createElement('div');
 
-    notFlippedCardI.style.backgroundImage = 'url(./lib/Maskgroup.png)';
-    flippedCardI.style.backgroundImage = `url(./lib/img/${element}`;
+        notFlippedCardI.classList.add('notflipped');
+        flippedCardI.classList.add('flipped');
 
-    cardsItem.append(flippedCardI, notFlippedCardI);
-    cardsContainer.appendChild(cardsItem);
+        notFlippedCardI.style.backgroundImage = 'url(./lib/Maskgroup.png)';
+        flippedCardI.style.backgroundImage = `url(./lib/img/${element}`;
 
-    const cards = document.querySelectorAll(".cards");
+        cardsItem.append(flippedCardI, notFlippedCardI);
+        cardsContainer.appendChild(cardsItem);
 
-    cards.forEach((card, index) =>
-      card.addEventListener("click", () => {
-        if (clickable === true && !card.classList.contains("successfully")) {
-          card.classList.add("flip");
-        }
-      })
-    );
+        const cards = document.querySelectorAll('.cards');
 
-    // cardsItem.style.backgroundImage = (`url(./lib/img/${element}`);
-  });
+        cards.forEach((card) =>
+            card.addEventListener('click', () => {
+                if (
+                    clickable === true &&
+                    !card.classList.contains('successfully')
+                ) {
+                    card.classList.add('flip');
+                }
+            })
+        );
+
+        // cardsItem.style.backgroundImage = (`url(./lib/img/${element}`);
+    });
 }
