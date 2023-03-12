@@ -1,0 +1,31 @@
+{
+    "name": "4.1",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write .",
+        "lint:js": "eslint ./src/**/*.js",
+        "lint:css": "stylelint ./src/**/*.css",
+        "lint": "npm run lint:js && npm run lint:css",
+        "prepare": "husky install"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "8.36.0",
+        "eslint-config-prettier": "8.7.0",
+        "eslint-plugin-prettier": "4.2.1",
+        "husky": "8.0.3",
+        "prettier": "2.8.4",
+        "stylelint": "14.16.0",
+        "stylelint-config-prettier": "9.0.4",
+        "stylelint-config-standard": "29.0.0",
+        "stylelint-prettier": "3.0.0"
+    },
+    "dependencies": {
+        "stylelint-selector-bem-pattern": "^2.1.1"
+    }
+}
