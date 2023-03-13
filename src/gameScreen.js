@@ -1,4 +1,4 @@
-import {getImage, duplicateArray, shuffle} from './cards-array';
+import {getImage, duplicateArray, shuffle} from './cards-array.js';
 
 export function difficultyScreen(numbers) {
     // let firsCard = undefined;

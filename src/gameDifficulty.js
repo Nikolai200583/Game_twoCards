@@ -1,4 +1,4 @@
-import {difficultyScreen} from './gameScreen';
+import {difficultyScreen} from './gameScreen.js';
 const buttons = document.querySelectorAll('.buttons');
 const boxButtons = document.querySelector('.level__content');
 const startButton = document.querySelector('.button__start');
