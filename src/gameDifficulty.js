@@ -28,6 +28,17 @@ export function gameDifficulty() {
         for (const control of buttons) {
             if (control.checked === true) {
                 window.application.levels = control.value;
+                let time = 0;
+                const timerInterval = setInterval(function () {
+                    const minutes = Math.floor((time - Math.floor(time)) * 60)
+                        .toString()
+                        .padStart(2, '0');
+                    const seconds = (time % 60).toString().padStart(2, '0');
+                    window.application.result.push(`${minutes}:${seconds}`);
+                    console.log(`${minutes}:${seconds}`);
+                    time++;
+                }, 1000);
+                window.application.timers.push(timerInterval);
                 switch (window.application.levels) {
                     case '1':
                         difficultyScreen(6);
@@ -45,4 +56,3 @@ export function gameDifficulty() {
         }
     }
 }
-
