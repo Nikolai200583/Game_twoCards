@@ -7,13 +7,14 @@
 
 @font-face {
     font-family: StratosSkyeng;
-    src: url(../lib/statosskyeng-v1.001/Desktop\ fonts/stratosskyeng-regular.otf)
+    src: url(../../lib/statosskyeng-v1.001/Desktop\ fonts/stratosskyeng-regular.otf)
         format(opentype);
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
     font-variant: normal;
 }
+
 .hidden {
     display: none;
 }
@@ -102,6 +103,13 @@ label:hover {
 }
 
 .timer {
+    width: 155px;
+    height: 72px;
+    font-family: StratosSkyeng;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
     color: black;
 }
 
@@ -133,7 +141,7 @@ label:hover {
     transition: all 0.2s linear;
 }
 
-.flipped {
+.notflipped {
     width: 95px;
     height: 133px;
     border: 1px solid black;
@@ -141,7 +149,7 @@ label:hover {
     position: absolute;
 }
 
-.notflipped {
+.flipped {
     width: 95px;
     height: 133px;
     border: 1px solid black;
@@ -154,6 +162,7 @@ label:hover {
     transition: transform 0.5s ease-in-out;
     transform: rotateY(180deg);
 }
+
 .flipped,
 .notflipped {
     backface-visibility: hidden;
