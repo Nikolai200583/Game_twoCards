@@ -7,13 +7,15 @@
 
 @font-face {
     font-family: StratosSkyeng;
-    src: 'url(../lib/statosskyeng-v1.001/Desktop\ fonts/stratosskyeng-regular.otf)'format(
-            opentype
-        );
+    src: url(../lib/statosskyeng-v1.001/Desktop\ fonts/stratosskyeng-regular.otf)
+        format(opentype);
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
     font-variant: normal;
+}
+.hidden {
+    display: none;
 }
 
 body {
@@ -100,7 +102,7 @@ label:hover {
 }
 
 .timer {
-    display: none;
+    color: black;
 }
 
 .buttonRestart {
@@ -127,36 +129,35 @@ label:hover {
     align-items: center;
     background: #e4fbff;
     border-radius: 4px;
-    border: solid 1px;
+    border: 1px solid black;
     transition: all 0.2s linear;
 }
 
 .flipped {
     width: 95px;
     height: 133px;
+    border: 1px solid black;
+    border-radius: 4px;
+    position: absolute;
 }
 
 .notflipped {
     width: 95px;
     height: 133px;
-}
-
-.cards i {
-    display: block;
-}
-
-.cards i + i {
-    display: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    transform: rotateY(180deg);
 }
 
 .cards.flip {
-    transform: perspective(100px) rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+    transform: rotateY(180deg);
 }
-
-.cards.flip i {
-    display: none;
-}
-
-.cards.flip i + i {
-    display: block;
+.flipped,
+.notflipped {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
